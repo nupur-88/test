@@ -54,5 +54,5 @@ jobs:
           # Ensures that the TestProject developer token is provided to TestProject OpenSDK
           # as an environment variable.
           TP_DEV_TOKEN: ${{secrets.TP_DEV_TOKEN}}
-        run: mvn clean verify
+        run: testproject-agent run opensdk/code-reuse/Bangalore_events.zip
         working-directory: opensdk/code-reuse
