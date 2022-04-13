@@ -49,10 +49,12 @@ jobs:
           interval: 1
           timeout: 60       
       # Runs the tests with Maven.     
-      - name: Run tests with Maven
+      - name: Setup Gradle
+        uses: gradle/gradle-build-action@v2
         env:
           # Ensures that the TestProject developer token is provided to TestProject OpenSDK
           # as an environment variable.
           TP_DEV_TOKEN: ${{secrets.TP_DEV_TOKEN}}
-        run: testproject-agent run opensdk/code-reuse/Bangalore_events.zip
-        working-directory: opensdk/code-reuse
+      - name: Execute Gradle build
+        run: ./gradlew build
+        working-directory: testproject
