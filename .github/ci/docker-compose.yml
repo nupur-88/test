@@ -7,7 +7,7 @@ services:
       - chrome
       - firefox
     environment:
-      TP_API_KEY: "${TP_API_KEY}"
+      TP_API_KEY: "-04O2of4D5RCyAwVltqrh-gqBbVag3ZxGiAXUtytYSs1"
       TP_AGENT_TEMP: "true"
       TP_SDK_PORT: "8686"
       CHROME: "chrome:4444"
